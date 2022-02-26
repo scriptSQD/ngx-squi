@@ -3,5 +3,43 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "squi": {
+      "projectType": "library",
+      "root": "projects/squi",
+      "sourceRoot": "projects/squi/src",
+      "prefix": "squi",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/squi/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/squi/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/squi/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/squi/src/test.ts",
+            "tsConfig": "projects/squi/tsconfig.spec.json",
+            "karmaConfig": "projects/squi/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "squi",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss",
+      "skipTests": true
+    }
   }
 }
