@@ -1,5 +1,5 @@
 {
-  "name": "ngx-squi",
+  "name": "@scriptsqd/ngx-squi",
   "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^13.2.0",

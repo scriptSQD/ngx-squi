@@ -8,6 +8,7 @@
     "build_with_styles": "npx tailwindcss -o ./projects/squi/styles/styles.scss && ng build",
     "pack_build": "cd dist/squi && npm pack",
     "build:full": "npm run build_with_styles && npm run pack_build",
+    "publish:full": "npm run build_with_styles && npm publish dist/squi --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
