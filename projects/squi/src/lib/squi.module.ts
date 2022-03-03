@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { SquiComponent } from './squi.component';
 import { RadioComponent } from './radio/radio.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
+import { ButtonComponent } from './button/button.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [SquiComponent, RadioComponent, DetailsComponent],
-  imports: [ReactiveFormsModule],
-  exports: [SquiComponent, RadioComponent, DetailsComponent],
+  declarations: [RadioComponent, DetailsComponent, ButtonComponent],
+  imports: [ReactiveFormsModule, CommonModule],
+  exports: [RadioComponent, DetailsComponent, ButtonComponent],
 })
 export class SquiModule {}
